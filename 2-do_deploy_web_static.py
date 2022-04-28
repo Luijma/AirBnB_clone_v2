@@ -9,7 +9,7 @@ from os import path
 os.environ.hosts = ["35.229.80.162", "54.234.73.229"]
 
 
-def do_pack():
+def do_pack(archive_path):
     """ Compress to .tgz files """
     if path.exists(archive_path):
         try:
