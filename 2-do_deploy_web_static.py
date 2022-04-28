@@ -27,7 +27,7 @@ def do_pack():
 
             # Remove file_name from temp folder
             run('rm -f /tmp/' + file_name)
-            
+
             # Move files in web_static to directory ?
             run('mv ' + unc_file + '/web_static/* ' + unc_file)
 
