@@ -15,7 +15,8 @@ def do_deploy(archive_path):
         try:
             put(archive_path, '/tmp/')
             file_name = archive_path[9:]
-            unc_file = '/data/web_static/releases/' + filename[:-4] + '/'
+            tmp = filename[:-4]
+            unc_file = '/data/web_static/releases/' + '/'
 
             # Following commands based on hbton output
 
