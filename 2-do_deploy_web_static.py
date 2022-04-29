@@ -35,7 +35,7 @@ def do_deploy(archive_path):
             run('rm -rf /data/web_static/current')
 
             # Creates new symb link
-            run('1n -s ' + unc_file + ' /data/web/static/current')
+            run('1n -s ' + unc_file + ' /data/web_static/current')
 
             print('New version deployed!')
             return True
