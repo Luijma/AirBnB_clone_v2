@@ -2,11 +2,11 @@
 """ Generates a .tgz archive from contents in web_static
 utilizing function do_pack """
 
-from fabric.api import run, put
+from fabric.api import run, env, put
 import os
 from os import path
 
-os.environ.hosts = ["35.229.80.162", "54.234.73.229"]
+env.hosts = ["35.229.80.162", "54.234.73.229"]
 
 
 def do_deploy(archive_path):
