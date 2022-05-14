@@ -6,7 +6,7 @@ Starts flask application
 
 from flask import Flask
 
-app = FLask(__name__)
+app = Flask(__name__)
 
 
 @app.route('/', strict_slashes=False)
