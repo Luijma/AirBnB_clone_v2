@@ -10,8 +10,9 @@ app = FLask(__name__)
 
 
 @app.route('/', strict_slashes=False)
-def hellow_world():
+def hello_world():
     return 'Hello HBNB!'
 
-if __name__ == '__main__'):
+
+if __name__ == '__main__':
     app.run(host='0.0.0.0')
