@@ -20,7 +20,7 @@ def hbnb():
 
 
 @app.route('/c/<text>', strict_slashes=False)
-def hbnb(text):
+def c_text(text):
     ''' prints text variable '''
     result = text.replace('_', ' ')
     return "C {}".format(result)
