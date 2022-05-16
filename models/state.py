@@ -19,15 +19,15 @@ class State(BaseModel, Base):
         cities = relationship("City", backref="state",
                               cascade='all, delete, delete-orphan')
     else:
-       # @property
-       # def reviews(self):
-       #     """ getter method for reviews when place_id == Place.id"""
-       #     cities_list = []
-       #     cities = fs.all(City)
-       #     for city in cities.values():
-       #         if city.state_id == self.id:
-       #             cities_list.append(city)
-       #     return cities_list
+        # @property
+        # def reviews(self):
+        #     """ getter method for reviews when place_id == Place.id"""
+        #     cities_list = []
+        #     cities = fs.all(City)
+        #     for city in cities.values():
+        #         if city.state_id == self.id:
+        #             cities_list.append(city)
+        #     return cities_list
 
         @property
         def cities(self):
