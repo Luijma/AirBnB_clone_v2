@@ -42,10 +42,7 @@ class DBStorage:
         obj_dict = {}
         if cls is None:
             for key, value in self.__classes.items():
-                try:
-                    result = self.__session.query(value).all()
-                except:
-                    pass
+                result = self.__session.query(self.__classes[key]).all()
                 for obj in result:
                     new_key = key + "." + obj.id
                     obj_dict[new_key] = obj
@@ -83,3 +80,7 @@ class DBStorage:
         if obj is not None:
             self.__session.delete(obj)
         pass
+
+    def close(self):
+        if self.__session is not None:
+            self.__session.close()
